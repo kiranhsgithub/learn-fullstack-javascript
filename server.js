@@ -1,3 +1,9 @@
-import config, { nodeEnv, logStars } from './config';
+import https from 'https';
 
-logStars('Function');
+https.get('https://www.lynda.com', res => {
+    console.log('Response status code', res.statusCode);
+    
+    res.on('data', chunk => {
+       console.log(chunk.toString()); 
+    });
+});
