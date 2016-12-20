@@ -57,11 +57,11 @@
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _testData = __webpack_require__(/*! ./testData.json */ 185);
+	var _testData = __webpack_require__(/*! ./testData.json */ 183);
 	
 	var _testData2 = _interopRequireDefault(_testData);
 	
-	var _App = __webpack_require__(/*! ./components/App */ 183);
+	var _App = __webpack_require__(/*! ./components/App */ 184);
 	
 	var _App2 = _interopRequireDefault(_App);
 	
@@ -22349,6 +22349,38 @@
 
 /***/ },
 /* 183 */
+/*!***************************!*\
+  !*** ./src/testData.json ***!
+  \***************************/
+/***/ function(module, exports) {
+
+	module.exports = {
+		"contests": [
+			{
+				"id": 1,
+				"categoryName": "Business/Company",
+				"contestName": "Cognitive Building Bricks"
+			},
+			{
+				"id": 2,
+				"categoryName": "Magazine/Newsletter",
+				"contestName": "Educating people about sustainable food production"
+			},
+			{
+				"id": 3,
+				"categoryName": "Software Component",
+				"contestName": "Big Data Analytics for Cash Circulation"
+			},
+			{
+				"id": 4,
+				"categoryName": "Website",
+				"contestName": "Free programming books"
+			}
+		]
+	};
+
+/***/ },
+/* 184 */
 /*!*******************************!*\
   !*** ./src/components/App.js ***!
   \*******************************/
@@ -22366,7 +22398,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Header = __webpack_require__(/*! ./Header */ 184);
+	var _Header = __webpack_require__(/*! ./Header */ 185);
 	
 	var _Header2 = _interopRequireDefault(_Header);
 	
@@ -22438,7 +22470,7 @@
 	exports.default = App;
 
 /***/ },
-/* 184 */
+/* 185 */
 /*!**********************************!*\
   !*** ./src/components/Header.js ***!
   \**********************************/
@@ -22473,38 +22505,6 @@
 	exports.default = Header;
 
 /***/ },
-/* 185 */
-/*!***************************!*\
-  !*** ./src/testData.json ***!
-  \***************************/
-/***/ function(module, exports) {
-
-	module.exports = {
-		"contests": [
-			{
-				"id": 1,
-				"categoryName": "Business/Company",
-				"contestName": "Cognitive Building Bricks"
-			},
-			{
-				"id": 2,
-				"categoryName": "Magazine/Newsletter",
-				"contestName": "Educating people about sustainable food production"
-			},
-			{
-				"id": 3,
-				"categoryName": "Software Component",
-				"contestName": "Big Data Analytics for Cash Circulation"
-			},
-			{
-				"id": 4,
-				"categoryName": "Website",
-				"contestName": "Free programming books"
-			}
-		]
-	};
-
-/***/ },
 /* 186 */
 /*!******************************************!*\
   !*** ./src/components/ContestPreview.js ***!
@@ -22529,12 +22529,12 @@
 	        { className: "ContestPreview" },
 	        _react2.default.createElement(
 	            "div",
-	            null,
+	            { className: "category-name" },
 	            contest.categoryName
 	        ),
 	        _react2.default.createElement(
 	            "div",
-	            null,
+	            { className: "contest-name" },
 	            contest.contestName
 	        )
 	    );
