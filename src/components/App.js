@@ -13,13 +13,6 @@ class App extends React.Component {
     componentDidMount() {
         //timers, listeners, ajax
         //things that happen after dom is loaded
-        axios.get('/api/contests')
-            .then(response => {
-                this.setState({
-                   contests: response.data.contests 
-                });
-            })
-            .catch(console.error);
             
     }
 

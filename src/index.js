@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './components/App'
+import App from './components/App';
 
 ReactDOM.render(
-    <App initialContests={[]}/>,
-    document.getElementById('root')        
+    <App initialContests={window.initialData.contests}/>,
+    document.getElementById('root')
 );
+
+
 
 
