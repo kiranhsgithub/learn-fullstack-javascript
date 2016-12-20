@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const color = Math.random() > 0.5 ? 'green' : 'red';
-
+const App = () => {
+    return (
+        <h2 className="text-center">Hello React Components!!</h2>
+    );
+};
 ReactDOM.render(
-    <h2 style={{color}}>Hello React with JSX!! -- {Math.random()}</h2>,
+    <App />,
     document.getElementById('root')        
 );
 
