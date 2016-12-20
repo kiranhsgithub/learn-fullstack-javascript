@@ -59,7 +59,14 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	_reactDom2.default.render(_react2.default.createElement('h2', null, 'Hello React'), document.getElementById('root'));
+	var color = Math.random() > 0.5 ? 'green' : 'red';
+	
+	_reactDom2.default.render(_react2.default.createElement(
+	    'h2',
+	    { style: { color: color } },
+	    'Hello React with JSX!! -- ',
+	    Math.random()
+	), document.getElementById('root'));
 
 /***/ },
 /* 1 */
