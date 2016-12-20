@@ -8,9 +8,12 @@ class App extends React.Component {
     };
 
     componentDidMount() {
+        //timers, listeners, ajax
+        //things that happen after dom is laoded
     }
 
     componentWillUnmount() {
+        //clean timers, listeners
     }
 
     

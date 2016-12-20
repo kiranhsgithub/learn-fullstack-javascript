@@ -22430,10 +22430,15 @@
 	
 	    _createClass(App, [{
 	        key: 'componentDidMount',
-	        value: function componentDidMount() {}
+	        value: function componentDidMount() {
+	            //timers, listeners, ajax
+	            //things that happen after dom is laoded
+	        }
 	    }, {
 	        key: 'componentWillUnmount',
-	        value: function componentWillUnmount() {}
+	        value: function componentWillUnmount() {
+	            //clean timers, listeners
+	        }
 	    }, {
 	        key: 'render',
 	        value: function render() {
