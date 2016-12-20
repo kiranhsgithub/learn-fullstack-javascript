@@ -61,9 +61,18 @@
 	
 	var App = function App(props) {
 	    return _react2.default.createElement(
-	        'h2',
-	        { className: 'text-center' },
-	        props.headerMessage
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	            'h2',
+	            { className: 'text-center' },
+	            props.headerMessage
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            null,
+	            '...'
+	        )
 	    );
 	};
 	

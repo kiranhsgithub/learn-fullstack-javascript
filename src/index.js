@@ -3,9 +3,14 @@ import ReactDOM from 'react-dom';
 
 const App = (props) => {
     return (
-        <h2 className="text-center">
-            {props.headerMessage}
-        </h2>
+        <div>
+            <h2 className="text-center">
+                {props.headerMessage}
+            </h2>
+            <div>
+               ...
+            </div>
+        </div>        
     );
 };
 
