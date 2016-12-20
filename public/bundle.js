@@ -22422,7 +22422,9 @@
 	                _react2.default.createElement(
 	                    'div',
 	                    null,
-	                    _react2.default.createElement(_ContestPreview2.default, this.props.contests[0])
+	                    this.props.contests.map(function (contest) {
+	                        return _react2.default.createElement(_ContestPreview2.default, contest);
+	                    })
 	                )
 	            );
 	        }
