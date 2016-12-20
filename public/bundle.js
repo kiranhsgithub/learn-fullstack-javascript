@@ -69,7 +69,11 @@
 	    );
 	};
 	
-	var App = function App(props) {
+	Header.propTypes = {
+	    message: _react2.default.PropTypes.string
+	};
+	
+	var App = function App() {
 	    return _react2.default.createElement(
 	        'div',
 	        null,
@@ -80,14 +84,6 @@
 	            '...'
 	        )
 	    );
-	};
-	
-	App.propTypes = {
-	    headerMessage: _react2.default.PropTypes.string
-	};
-	
-	App.defaultProps = {
-	    headerMessage: "Hello Default!!"
 	};
 	
 	_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('root'));

@@ -9,7 +9,11 @@ const Header = ({ message }) => {
   );  
 };
 
-const App = (props) => {
+Header.propTypes = {
+    message: React.PropTypes.string
+};
+
+const App = () => {
     return (
         <div>
             <Header message="Naming Contests" />
@@ -18,14 +22,6 @@ const App = (props) => {
             </div>
         </div>        
     );
-};
-
-App.propTypes = {
-    headerMessage: React.PropTypes.string
-};
-
-App.defaultProps = {
-    headerMessage : "Hello Default!!"
 };
 
 ReactDOM.render(
