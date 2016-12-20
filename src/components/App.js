@@ -3,10 +3,7 @@ import Header from './Header'
 
 class App extends React.Component {
     
-    constructor(props) {
-        super(props);
-        this.state = {test: 42};
-    }
+    state = {test: 37};
     
     render() {
          return (
