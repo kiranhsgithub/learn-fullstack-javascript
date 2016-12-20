@@ -68,10 +68,10 @@
 	};
 	
 	App.propTypes = {
-	    headerMessage: _react2.default.PropTypes.string
+	    headerMessage: _react2.default.PropTypes.string.isRequired
 	};
 	
-	_reactDom2.default.render(_react2.default.createElement(App, { headerMessage: 'Hello props!' }), document.getElementById('root'));
+	_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('root'));
 
 /***/ },
 /* 1 */
