@@ -67,8 +67,6 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	console.log(_testData2.default);
-	
 	_reactDom2.default.render(_react2.default.createElement(_App2.default, { contests: _testData2.default.contests }), document.getElementById('root'));
 
 /***/ },
@@ -22372,6 +22370,10 @@
 	
 	var _Header2 = _interopRequireDefault(_Header);
 	
+	var _ContestPreview = __webpack_require__(/*! ./ContestPreview */ 186);
+	
+	var _ContestPreview2 = _interopRequireDefault(_ContestPreview);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22420,7 +22422,7 @@
 	                _react2.default.createElement(
 	                    'div',
 	                    null,
-	                    '...'
+	                    _react2.default.createElement(_ContestPreview2.default, this.props.contests[0])
 	                )
 	            );
 	        }
@@ -22499,6 +22501,44 @@
 			}
 		]
 	};
+
+/***/ },
+/* 186 */
+/*!******************************************!*\
+  !*** ./src/components/ContestPreview.js ***!
+  \******************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var ContestPreview = function ContestPreview(contest) {
+	    return _react2.default.createElement(
+	        "div",
+	        { className: "ContestPreview" },
+	        _react2.default.createElement(
+	            "div",
+	            null,
+	            contest.categoryName
+	        ),
+	        _react2.default.createElement(
+	            "div",
+	            null,
+	            contest.contestName
+	        )
+	    );
+	};
+	
+	exports.default = ContestPreview;
 
 /***/ }
 /******/ ]);
