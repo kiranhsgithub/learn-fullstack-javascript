@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+const Header = ({ message }) => {
+  return (
+    <h2 className="text-center">
+        {message}
+    </h2>
+  );  
+};
+
 const App = (props) => {
     return (
         <div>
-            <h2 className="text-center">
-                {props.headerMessage}
-            </h2>
+            <Header message="Naming Contests" />
             <div>
                ...
             </div>
