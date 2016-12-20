@@ -22412,10 +22412,13 @@
 	var App = function (_React$Component) {
 	    _inherits(App, _React$Component);
 	
-	    function App() {
+	    function App(props) {
 	        _classCallCheck(this, App);
 	
-	        return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+	        var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+	
+	        _this.state = { test: 42 };
+	        return _this;
 	    }
 	
 	    _createClass(App, [{
@@ -22428,7 +22431,7 @@
 	                _react2.default.createElement(
 	                    'div',
 	                    null,
-	                    '----'
+	                    this.state.test
 	                )
 	            );
 	        }
