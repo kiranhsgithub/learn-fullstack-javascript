@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/kiranhsgithub/learn-fullstack-javascript#readme",
   "dependencies": {
+    "axios": "^0.15.3",
     "ejs": "^2.5.5",
     "express": "^4.14.0",
     "json-loader": "^0.5.4",
