@@ -14,7 +14,7 @@ App.propTypes = {
 };
 
 ReactDOM.render(
-    <App />,
+    <App headerMessage="Hello props!"/>,
     document.getElementById('root')        
 );
 
