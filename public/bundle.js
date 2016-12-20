@@ -22423,7 +22423,9 @@
 	            args[_key] = arguments[_key];
 	        }
 	
-	        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = App.__proto__ || Object.getPrototypeOf(App)).call.apply(_ref, [this].concat(args))), _this), _this.state = { test: 37 }, _temp), _possibleConstructorReturn(_this, _ret);
+	        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = App.__proto__ || Object.getPrototypeOf(App)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+	            pageHeader: 'Naming Contests'
+	        }, _temp), _possibleConstructorReturn(_this, _ret);
 	    }
 	
 	    _createClass(App, [{
@@ -22432,11 +22434,11 @@
 	            return _react2.default.createElement(
 	                'div',
 	                { className: 'App' },
-	                _react2.default.createElement(_Header2.default, { message: 'Naming Contests' }),
+	                _react2.default.createElement(_Header2.default, { message: this.state.pageHeader }),
 	                _react2.default.createElement(
 	                    'div',
 	                    null,
-	                    this.state.test
+	                    '...'
 	                )
 	            );
 	        }
