@@ -63,7 +63,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	_reactDom2.default.render(_react2.default.createElement(_App2.default, { initialContests: window.initialData.contests }), document.getElementById('root'));
+	_reactDom2.default.render(_react2.default.createElement(_App2.default, { initialData: window.initialData }), document.getElementById('root'));
 
 /***/ },
 /* 1 */
@@ -22410,14 +22410,10 @@
 	            args[_key] = arguments[_key];
 	        }
 	
-	        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = App.__proto__ || Object.getPrototypeOf(App)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-	            pageHeader: 'Naming Contests',
-	            contests: _this.props.initialContests
-	        }, _this.fetchContest = function (contestId) {
+	        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = App.__proto__ || Object.getPrototypeOf(App)).call.apply(_ref, [this].concat(args))), _this), _this.state = _this.props.initialData, _this.fetchContest = function (contestId) {
 	            pushState({ currentContestId: contestId }, '/contest/' + contestId);
 	            api.fetchContest(contestId).then(function (contest) {
 	                _this.setState({
-	                    pageHeader: contest.contestName,
 	                    currentContestId: contest.id,
 	                    contests: _extends({}, _this.state.contests, _defineProperty({}, contest.id, contest))
 	                });
@@ -22436,6 +22432,14 @@
 	        key: 'componentWillUnmount',
 	        value: function componentWillUnmount() {
 	            //clean timers, listeners
+	        }
+	    }, {
+	        key: 'pageHeader',
+	        value: function pageHeader() {
+	            if (this.state.currentContestId) {
+	                return this.currentContest().contestName;
+	            }
+	            return 'Naming Contests';
 	        }
 	    }, {
 	        key: 'currentContest',
@@ -22460,7 +22464,7 @@
 	            return _react2.default.createElement(
 	                'div',
 	                { className: 'App' },
-	                _react2.default.createElement(_Header2.default, { message: this.state.pageHeader }),
+	                _react2.default.createElement(_Header2.default, { message: this.pageHeader() }),
 	                this.currentContent()
 	            );
 	        }
@@ -22469,6 +22473,9 @@
 	    return App;
 	}(_react2.default.Component);
 	
+	App.propTypes = {
+	    initialData: _react2.default.PropTypes.object.isRequired
+	};
 	;
 	
 	exports.default = App;
