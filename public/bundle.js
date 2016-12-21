@@ -22607,16 +22607,16 @@
 	    return _react2.default.createElement(
 	        'div',
 	        { className: 'ContestList' },
-	        contests.map(function (contest) {
-	            return _react2.default.createElement(_ContestPreview2.default, _extends({ key: contest.id,
+	        Object.keys(contests).map(function (contestId) {
+	            return _react2.default.createElement(_ContestPreview2.default, _extends({ key: contestId,
 	                onClick: onContestClick
-	            }, contest));
+	            }, contests[contestId]));
 	        })
 	    );
 	};
 	
 	ContestList.propTypes = {
-	    contests: _react2.default.PropTypes.array,
+	    contests: _react2.default.PropTypes.object,
 	    onContestClick: _react2.default.PropTypes.func.isRequired
 	};
 	
