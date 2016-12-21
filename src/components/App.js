@@ -23,10 +23,13 @@ class App extends React.Component {
     }
     
     fetchContest = (contestId) => {
-      pushState(
-        {currentContestId: contestId },
-        `/contest/${contestId}`
-      );  
+          pushState(
+            {currentContestId: contestId },
+            `/contest/${contestId}`
+          ); 
+        //look up the contest
+        
+        
             
     };
 

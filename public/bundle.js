@@ -22401,6 +22401,8 @@
 	            contests: _this.props.initialContests
 	        }, _this.fetchContest = function (contestId) {
 	            pushState({ currentContestId: contestId }, '/contest/' + contestId);
+	            //look up the contest
+	
 	        }, _temp), _possibleConstructorReturn(_this, _ret);
 	    }
 	
