@@ -22438,11 +22438,16 @@
 	            //clean timers, listeners
 	        }
 	    }, {
+	        key: 'currentContest',
+	        value: function currentContest() {
+	            return this.state.contests[this.state.currentContestId];
+	        }
+	    }, {
 	        key: 'currentContent',
 	        value: function currentContent() {
 	            if (this.state.currentContestId) {
 	
-	                return _react2.default.createElement(_Contest2.default, this.state.contests[this.state.currentContestId]);
+	                return _react2.default.createElement(_Contest2.default, this.currentContest());
 	            }
 	
 	            return _react2.default.createElement(_ContestList2.default, {
