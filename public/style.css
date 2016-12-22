@@ -1,6 +1,6 @@
 .ContestPreview {
   margin: 1em;
-  border: 1px solid green; }
+  border: 1px solid #ccc; }
   .ContestPreview .category-name {
     border-bottom: 1px solid #ccc;
     padding: 0.25em 0.5em;

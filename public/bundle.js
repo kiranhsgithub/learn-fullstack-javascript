@@ -22430,6 +22430,12 @@
 	                    contests: contests
 	                });
 	            });
+	        }, _this.fetchNames = function (nameIds) {
+	            api.fetchNames(nameIds).then(function (names) {
+	                _this.setState({
+	                    names: names
+	                });
+	            });
 	        }, _temp), _possibleConstructorReturn(_this, _ret);
 	    }
 	
@@ -22471,7 +22477,8 @@
 	        value: function currentContent() {
 	            if (this.state.currentContestId) {
 	                return _react2.default.createElement(_Contest2.default, _extends({
-	                    contestListClick: this.fetchContestList
+	                    contestListClick: this.fetchContestList,
+	                    fetchNames: this.fetchNames
 	                }, this.currentContest()));
 	            }
 	
@@ -22696,6 +22703,11 @@
 	  }
 	
 	  _createClass(Contest, [{
+	    key: "componentDidMount",
+	    value: function componentDidMount() {
+	      this.props.fetchNames(this.props.nameIds);
+	    }
+	  }, {
 	    key: "render",
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -22804,7 +22816,9 @@
 	
 	Contest.propTypes = {
 	  description: _react.PropTypes.string.isRequired,
-	  contestListClick: _react.PropTypes.func.isRequired
+	  contestListClick: _react.PropTypes.func.isRequired,
+	  fetchNames: _react.PropTypes.func.isRequired,
+	  nameIds: _react.PropTypes.array.isRequired
 	};
 	
 	exports.default = Contest;
@@ -22821,7 +22835,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.fetchContestList = exports.fetchContest = undefined;
+	exports.fetchNames = exports.fetchContestList = exports.fetchContest = undefined;
 	
 	var _axios = __webpack_require__(/*! axios */ 189);
 	
@@ -22838,6 +22852,12 @@
 	var fetchContestList = exports.fetchContestList = function fetchContestList() {
 	    return _axios2.default.get('/api/contests').then(function (resp) {
 	        return resp.data.contests;
+	    });
+	};
+	
+	var fetchNames = exports.fetchNames = function fetchNames(nameIds) {
+	    return _axios2.default.get('/api/names/' + nameIds.join(',')).then(function (resp) {
+	        return resp.data.names;
 	    });
 	};
 
