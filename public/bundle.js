@@ -22684,7 +22684,7 @@
   \***********************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -22708,68 +22708,79 @@
 	  _inherits(Contest, _Component);
 	
 	  function Contest() {
+	    var _ref;
+	
+	    var _temp, _this, _ret;
+	
 	    _classCallCheck(this, Contest);
 	
-	    return _possibleConstructorReturn(this, (Contest.__proto__ || Object.getPrototypeOf(Contest)).apply(this, arguments));
+	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	      args[_key] = arguments[_key];
+	    }
+	
+	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Contest.__proto__ || Object.getPrototypeOf(Contest)).call.apply(_ref, [this].concat(args))), _this), _this.handleSubmit = function (event) {
+	      event.preventDefault();
+	      console.log('test');
+	    }, _temp), _possibleConstructorReturn(_this, _ret);
 	  }
 	
 	  _createClass(Contest, [{
-	    key: "componentDidMount",
+	    key: 'componentDidMount',
 	    value: function componentDidMount() {
 	      this.props.fetchNames(this.props.nameIds);
 	    }
 	  }, {
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      var _this2 = this;
 	
 	      return _react2.default.createElement(
-	        "div",
-	        { className: "Contest" },
+	        'div',
+	        { className: 'Contest' },
 	        _react2.default.createElement(
-	          "div",
-	          { className: "panel panel-default" },
+	          'div',
+	          { className: 'panel panel-default' },
 	          _react2.default.createElement(
-	            "div",
-	            { className: "panel-heading" },
+	            'div',
+	            { className: 'panel-heading' },
 	            _react2.default.createElement(
-	              "h3",
-	              { className: "panel-title" },
-	              "Contest Description"
+	              'h3',
+	              { className: 'panel-title' },
+	              'Contest Description'
 	            )
 	          ),
 	          _react2.default.createElement(
-	            "div",
-	            { className: "panel-body" },
+	            'div',
+	            { className: 'panel-body' },
 	            _react2.default.createElement(
-	              "div",
-	              { className: "contest-description" },
+	              'div',
+	              { className: 'contest-description' },
 	              this.props.description
 	            )
 	          )
 	        ),
 	        _react2.default.createElement(
-	          "div",
-	          { className: "panel panel-default" },
+	          'div',
+	          { className: 'panel panel-default' },
 	          _react2.default.createElement(
-	            "div",
-	            { className: "panel-heading" },
+	            'div',
+	            { className: 'panel-heading' },
 	            _react2.default.createElement(
-	              "h3",
-	              { className: "panel-title" },
-	              "Proposed Names"
+	              'h3',
+	              { className: 'panel-title' },
+	              'Proposed Names'
 	            )
 	          ),
 	          _react2.default.createElement(
-	            "div",
-	            { className: "panel-body" },
+	            'div',
+	            { className: 'panel-body' },
 	            _react2.default.createElement(
-	              "ul",
-	              { className: "list-group" },
+	              'ul',
+	              { className: 'list-group' },
 	              this.props.nameIds.map(function (nameId) {
 	                return _react2.default.createElement(
-	                  "li",
-	                  { key: nameId, className: "list-group-item" },
+	                  'li',
+	                  { key: nameId, className: 'list-group-item' },
 	                  _this2.props.lookupName(nameId).name
 	                );
 	              })
@@ -22777,34 +22788,36 @@
 	          )
 	        ),
 	        _react2.default.createElement(
-	          "div",
-	          { className: "panel panel-info" },
+	          'div',
+	          { className: 'panel panel-info' },
 	          _react2.default.createElement(
-	            "div",
-	            { className: "panel-heading" },
+	            'div',
+	            { className: 'panel-heading' },
 	            _react2.default.createElement(
-	              "h3",
-	              { className: "panel-title" },
-	              "Propose a New Name"
+	              'h3',
+	              { className: 'panel-title' },
+	              'Propose a New Name'
 	            )
 	          ),
 	          _react2.default.createElement(
-	            "div",
-	            { className: "panel-body" },
+	            'div',
+	            { className: 'panel-body' },
 	            _react2.default.createElement(
-	              "form",
-	              null,
+	              'form',
+	              { onSubmit: this.handleSubmit },
 	              _react2.default.createElement(
-	                "div",
-	                { className: "input-group" },
-	                _react2.default.createElement("input", { type: "text", placeholder: "New Name Here...", className: "form-control" }),
+	                'div',
+	                { className: 'input-group' },
+	                _react2.default.createElement('input', { type: 'text',
+	                  placeholder: 'New Name Here...', className: 'form-control' }),
 	                _react2.default.createElement(
-	                  "span",
-	                  { className: "input-group-btn" },
+	                  'span',
+	                  { className: 'input-group-btn' },
 	                  _react2.default.createElement(
-	                    "button",
-	                    { type: "submit", className: "btn btn-info" },
-	                    "Sumbit"
+	                    'button',
+	                    { type: 'submit',
+	                      className: 'btn btn-info' },
+	                    'Sumbit'
 	                  )
 	                )
 	              )
@@ -22812,10 +22825,10 @@
 	          )
 	        ),
 	        _react2.default.createElement(
-	          "div",
-	          { className: "home-link link",
+	          'div',
+	          { className: 'home-link link',
 	            onClick: this.props.contestListClick },
-	          "Contest List"
+	          'Contest List'
 	        )
 	      );
 	    }
