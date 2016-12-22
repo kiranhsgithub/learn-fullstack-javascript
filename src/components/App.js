@@ -7,6 +7,10 @@ import * as api from '../api';
 const pushState = (obj, url) => 
     window.history.pushState(obj, '', url);
 
+const onPopState = handler => {
+    window.onpopstate = handler;
+}
+
 class App extends React.Component {
     
     static propTypes = {
@@ -18,7 +22,12 @@ class App extends React.Component {
     componentDidMount() {
         //timers, listeners, ajax
         //things that happen after dom is loaded
+        onPopState((event) => {
+            this.setState({
+                currentContestId: (event.state || {}).currentContestId
+            });
             
+        });
     }
 
     componentWillUnmount() {
