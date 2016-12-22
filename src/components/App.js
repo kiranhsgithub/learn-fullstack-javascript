@@ -9,7 +9,7 @@ const pushState = (obj, url) =>
 
 const onPopState = handler => {
     window.onpopstate = handler;
-}
+};
 
 class App extends React.Component {
     
@@ -54,7 +54,7 @@ class App extends React.Component {
     fetchContestList = () => {
           pushState(
             {currentContestId: null },
-            `/`
+            '/'
           ); 
        api.fetchContestList().then(contests => {
            this.setState({
@@ -63,29 +63,26 @@ class App extends React.Component {
         });
        });       
     };
-
+    currentContest() {
+        return this.state.contests[this.state.currentContestId];
+    }
     pageHeader() {
         if(this.state.currentContestId) {
             return this.currentContest().contestName;
         }
-        return 'Naming Contests';
-    }
 
-    currentContest() {
-        return this.state.contests[this.state.currentContestId];
+        return 'Naming Contests';
     }
     currentContent() {
         if(this.state.currentContestId) {
-        
             return <Contest
             contestListClick={this.fetchContestList}
             {...this.currentContest()} />;
         }
-            
-            
+                      
          return <ContestList 
             onContestClick = {this.fetchContest}
-            contests = {this.state.contests} />
+            contests = {this.state.contests} />;
     }
 
     render() {
@@ -96,6 +93,6 @@ class App extends React.Component {
             </div>        
         );   
     }
-};
+}
 
 export default App;
